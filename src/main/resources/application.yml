@@ -1,0 +1,5 @@
+feign:
+  httpclient:
+    disable-ssl-validation: true
+server:
+  port: 8090
