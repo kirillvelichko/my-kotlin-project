@@ -20,7 +20,7 @@ class UserService {
     }
 
     fun getUserSoap(login: String): GetUserResponse {
-        val request: GetUserRequest = GetUserRequest()
+        val request = GetUserRequest()
         request.login = login
         return userSoapClient.getUser(request)
     }

@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: my-kotlin-project
 feign:
   httpclient:
     disable-ssl-validation: true
