@@ -5,10 +5,8 @@ import feign.codec.Encoder
 import feign.jaxb.JAXBContextFactory
 import feign.soap.SOAPDecoder
 import feign.soap.SOAPEncoder
-import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 
-@SpringBootApplication
 class UserSoapClientConfig {
     @Bean
     fun feignEncoder(): Encoder {

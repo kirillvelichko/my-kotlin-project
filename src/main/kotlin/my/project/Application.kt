@@ -1,6 +1,7 @@
 package my.project
 
 import my.project.service.UserService
+import my.project.service.utils.convertGetUserResponseToUser
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -11,8 +12,12 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 @EnableFeignClients
 class Application(private val userService: UserService) : ApplicationRunner {
     override fun run(args: ApplicationArguments?) {
-        //println(userService.getUser("test122"))
-        println(userService.getUserSoap("test122").user.password)
+        println("REST:")
+        println(userService.createUserRest("testRest", "password"))
+        println(userService.getUserRest("testRest"))
+        println("SOAP:")
+        println(userService.createUserSoap("testSoap", "pwd").message)
+        println(convertGetUserResponseToUser(userService.getUserSoap("testSoap")))
     }
 }
 
