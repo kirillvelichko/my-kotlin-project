@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody
         configuration = [UserSoapClientConfig::class]
 )
 interface UserSoapClient {
+
     @PostMapping(value = ["/ws"], consumes = ["text/xml"])
     fun getUser(@RequestBody request: GetUserRequest): GetUserResponse
 

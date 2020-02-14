@@ -1,6 +1,6 @@
 package my.project.service
 
-import my.project.data.dto.User
+import my.project.data.model.User
 import my.project.gen.jaxb.*
 import my.project.http.client.rest.UserRestClient
 import my.project.http.client.soap.UserSoapClient
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class UserService {
+
     @Autowired
     lateinit var userRestClient: UserRestClient
 
@@ -20,7 +21,7 @@ class UserService {
     }
 
     fun createUserRest(login: String, password: String): String {
-        val user = User("", login, password)
+        val user = User(login, password)
         return userRestClient.createUser(user)
     }
 

@@ -1,6 +1,6 @@
 package my.project.service.utils
 
-import my.project.data.dto.User
+import my.project.data.model.User
 import my.project.gen.jaxb.GetUserResponse
 
 fun convertGetUserResponseToUser(getUserResponse: GetUserResponse): User {

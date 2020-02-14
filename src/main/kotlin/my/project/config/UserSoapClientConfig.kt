@@ -8,6 +8,7 @@ import feign.soap.SOAPEncoder
 import org.springframework.context.annotation.Bean
 
 class UserSoapClientConfig {
+
     @Bean
     fun feignEncoder(): Encoder {
         return SOAPEncoder(jaxbFactory)
