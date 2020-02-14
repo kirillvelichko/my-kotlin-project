@@ -34,4 +34,18 @@ class UserController(val rabbitTemplate: RabbitTemplate, val mapper: ObjectMappe
 
         return response?.body?.let { String(it) }
     }
+
+    @GetMapping("/deleteUser/{login}")
+    fun deleteUser(@PathVariable login: String?): String? {
+
+        return "delete user $login"
+    }
+
+    @GetMapping("/updateUser/{login}/{password}")
+    fun updateUser(@PathVariable login: String?, @PathVariable password: String?): String? {
+
+        return "update user $login $password"
+    }
+
+
 }
