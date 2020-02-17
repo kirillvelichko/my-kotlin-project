@@ -21,6 +21,7 @@ dependencies {
     implementation("io.github.openfeign:feign-httpclient:10.7.4")
     implementation("org.springframework.amqp:spring-rabbit:2.2.3.RELEASE")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.2.4.RELEASE")
+    implementation("org.springframework.kafka:spring-kafka:2.4.2.RELEASE")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.2.4.RELEASE")
 }
