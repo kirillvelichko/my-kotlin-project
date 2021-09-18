@@ -1,5 +1,6 @@
-Test SpringBoot app with:
+SpringBoot test App
 - Gradle/Kotlin DSL
+- Feign
 - REST
 - HTTPs
 - Integration with RabbitMQ
