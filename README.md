@@ -1,5 +1,6 @@
-SpringBoot app written with Kotlin and Gradle/Kotlin DSL:
-- REST and SOAP via Feign http client
+Test SpringBoot app with:
+- Gradle/Kotlin DSL
+- REST
 - HTTPs
-- Integration with RabbitMQ, producer side
-- Integration with Kafka, producer side
+- Integration with RabbitMQ
+- Integration with Kafka

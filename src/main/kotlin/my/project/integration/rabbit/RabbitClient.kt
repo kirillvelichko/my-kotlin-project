@@ -1,22 +1,14 @@
-package my.project.rabbit
+package my.project.integration.rabbit
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import my.project.data.model.User
+import my.project.model.User
 import org.springframework.amqp.core.Message
 import org.springframework.amqp.core.MessageProperties
 import org.springframework.amqp.rabbit.core.RabbitTemplate
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class RabbitClient {
-
-    @Autowired
-    private lateinit var rabbit: RabbitTemplate
-
-    @Autowired
-    private lateinit var mapper: ObjectMapper
-
+class RabbitClient(val rabbit: RabbitTemplate, val mapper: ObjectMapper) {
     fun createUser(login: String?): String? {
         var response: Message? = null
         if (login != null) {

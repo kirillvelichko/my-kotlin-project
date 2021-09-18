@@ -1,22 +1,14 @@
-package my.project.kafka
+package my.project.integration.kafka
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import my.project.config.kafka.topicNameDeleteUser
 import my.project.config.kafka.topicNameUpdateUser
-import my.project.data.model.User
-import org.springframework.beans.factory.annotation.Autowired
+import my.project.model.User
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Service
 
 @Service
-class KafkaClient {
-
-    @Autowired
-    private lateinit var kafkaTemplate: KafkaTemplate<String, String>
-
-    @Autowired
-    private lateinit var mapper: ObjectMapper
-
+class KafkaClient(val kafkaTemplate: KafkaTemplate<String, String>, val mapper: ObjectMapper) {
     fun deleteUser(login: String?): String? {
         login?.let {
             kafkaTemplate.send(topicNameDeleteUser, login)

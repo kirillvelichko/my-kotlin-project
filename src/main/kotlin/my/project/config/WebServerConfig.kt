@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean
 
 @SpringBootConfiguration
 class WebServerConfig {
-
     @Bean
     fun servletContainer(): ServletWebServerFactory {
         return object : TomcatServletWebServerFactory() {

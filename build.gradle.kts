@@ -15,15 +15,11 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:2.2.4.RELEASE")
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.61")
-    implementation("io.github.openfeign:feign-soap:10.7.4")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign:2.2.1.RELEASE")
     implementation("io.github.openfeign:feign-httpclient:10.7.4")
     implementation("org.springframework.amqp:spring-rabbit:2.2.3.RELEASE")
-    implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.2.4.RELEASE")
     implementation("org.springframework.kafka:spring-kafka:2.4.2.RELEASE")
-
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.2.4.RELEASE")
 }
 
 tasks {

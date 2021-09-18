@@ -13,7 +13,6 @@ const val topicNameUpdateUser: String = "update_user"
 
 @SpringBootConfiguration
 class TopicConfig {
-
     @Bean
     fun kafkaAdmin(): KafkaAdmin {
         val configs: MutableMap<String, Any?> = HashMap()
@@ -30,5 +29,4 @@ class TopicConfig {
     fun topicUpdateUser(): NewTopic {
         return NewTopic(topicNameUpdateUser, 1, 1)
     }
-
 }
